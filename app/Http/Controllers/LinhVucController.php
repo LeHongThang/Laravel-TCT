@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use App\LinhVuc;
 class LinhVucController extends Controller
 {
     /**
@@ -36,7 +36,10 @@ class LinhVucController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $linhVuc=new LinhVuc;
+        $linhVuc->ten_linh_vuc = $request->ten_linh_vuc;
+        $linhVuc->save();
+        $return "Thêm lĩnh vực thành công "
     }
 
     /**

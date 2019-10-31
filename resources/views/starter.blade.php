@@ -13,7 +13,7 @@
         @yield('css')
         
         <!-- Datatables init -->
-        <script src="{{ asset('assets/js/pages/datatables.init.js') }}"></script>
+        <!-- <script src="{{ asset('assets/js/pages/datatables.init.js') }}"></script> -->
         <!-- App css -->
         <link href="{{ asset('assets/css/bootstrap.min.css') }}" rel="stylesheet" type="text/css" />
         <link href="{{ asset('assets/css/icons.min.css') }}" rel="stylesheet" type="text/css" />
