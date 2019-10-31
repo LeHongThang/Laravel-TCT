@@ -18,13 +18,17 @@ Route::get('/', function () {
 Route::prefix('linh-vuc')->group(function(){
 
 	Route::name('linh-vuc.')->group(function(){
-		Route::get('/', function () {
-		    return view('ds-linh-vuc');
-		})->name('danh-sach');
+		// Route::get('/', function () {
+		//     return view('ds-linh-vuc');
+		// })->name('danh-sach');
 
-		Route::get('/them-moi', function () {
-		    return view('them-linh-vuc');
-		})->name('them-moi');
+		// Route::get('/them-moi', function () {
+		//     return view('them-linh-vuc');
+		// })->name('them-moi');
+		Route::get('/','LinhVucController@index')->name('danh-sach');
+		Route::get('them-moi','LinhVucController@index')->name('hien-thi-danh-sach');
+		Route::get('them-moi','LinhVucController@create')->name('them-moi');
+		Route::post('them-moi','LinhVucController@store')->name('xu-ly-them-linh-vuc');
 	});
 	
 });
